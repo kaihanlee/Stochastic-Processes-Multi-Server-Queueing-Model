@@ -11,7 +11,7 @@ To help you with the report you are provided you with the following information:
     - Otherwise, the job is added to the Waiting queue.
 - When a processing unit is done processing the job it was assigned to, the scheduler assigns another job to it from the queue (picked randomly), if one exists.
 - The length of each job is exponentially distributed with mean length 6 sec.
-- Jobs arrival follows a Poisson process with rate 2 sec􀀀1.
+- Jobs arrival follows a Poisson process with rate 1 job every 2 seconds.
 - Jobs arrival is independent from their processing times.
 - It is estimated that a delayed job costs 1:25 pence for every second it spends in the Waiting queue.
 - The operating cost of a processing unit is 1:5 pence per second if it is Working and 1 pence if it is idle.
@@ -22,5 +22,6 @@ When reporting results, we are interested in the following metrics:
 - The utilization of the processing units, i.e. the proportion of time they are working.
 - The average number of idle processors in a second.
 - The average number of jobs in the queue in a second.
-- The operational cost of the system.
+- The operational cost of the system. 
+
 HINT: Assume that the scheduler has a maximum number of jobs m after which it simply rejects jobs. Then investigate what large value of m is sufficient to get a correct answer.
